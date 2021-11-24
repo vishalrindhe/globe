@@ -57,6 +57,13 @@ export class HomePage{
         // chart.set('panY', 'rotateY');
         homeGeoPoint: { latitude: 2, longitude: 2 },
       }));
+      chart.animate({
+        key: "rotationX",
+        from: 0,
+        to: 360,
+        duration: 30000,
+        loops: Infinity
+      });
 
       const cont = chart.children.push(am5.Container.new(root, {
         layout: root.horizontalLayout,
